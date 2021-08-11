@@ -4,6 +4,10 @@ export const enum ProviderType {
      */
     LOCAL = "LOCAL",
     /**
+     * Deploy to postgres
+     */
+    POSTGRES = "POSTGRES",
+    /**
      * Deploy instances in AWS 
      */
     AWS = "AWS",

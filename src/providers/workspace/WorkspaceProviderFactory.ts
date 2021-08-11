@@ -1,5 +1,6 @@
 import { ProviderType } from "../../commons/ProviderType";
 import { LocalWorkspaceProvider } from "./local/LocalWorkspaceProvider";
+import { PostgresWorkspaceProvider } from './distributed/PostgresWorkspaceProvider';
 
 export class WorkpaceProviderFactory {
     /**
@@ -10,6 +11,7 @@ export class WorkpaceProviderFactory {
     public createProvider(type: ProviderType) {
         switch(type) {
             case ProviderType.LOCAL: return new LocalWorkspaceProvider();
+            case ProviderType.POSTGRES: return new PostgresWorkspaceProvider();
         }
     }
 }
